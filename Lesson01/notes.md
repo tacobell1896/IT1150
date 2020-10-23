@@ -43,6 +43,59 @@
 4. Search Engine Optimization
 5. Responsive Web Design
 
-# Chapter 02
+# Chapter 02 HTML Syntax
 
+## Basic Structure of Document
+### DOCTYPE declaration 
+- First line of code in every HTML document.
+- Tells browser that the document uses HTML5 
+`<!DOCTYPE html>`
+### Document tree
+- Starts after the Doctype declaration
+- Consists of HTML Elements that define content and structure of the page
+- **Head** of page is information about the page itself.
+- **Body** of page contains the elements that provide the content and structure. 
+```
+<html>
+	<head>
+	
+	</head>
+	<body>
 
+	</body>
+</html>
+```
+### Simple HTML5 Document
+```
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>San Joaquin Valley Town Hall</title>	
+	</head>
+	<body>
+		<h1>San Joaquin Valley Town Hall</h1>
+		<p>Welcome to the San Joaquin Valley Town Hall</p>
+		<p>We have some amazing speakers in store for you this season!</p>
+		<p><a href="speakers.html">Speaker Information</a></p>
+	</body>
+</html>
+```
+## How to code elements and tags
+### Elements with opening and closing tags
+`<h1></h1>`
+`<p></p>`
+### Elements with empty tags
+`<br>`
+`<img src="logo.png" alt="Logo">`
+### Nesting of tags
+- Tags are basically like capsules.
+`<p>Order your copy <i>today</i></p>`
+## How to code attributes
+- Attributes are coded within the opening tag of an element or within an empty tag
+- Needs attribute name, equal sign, and attribute value
+- Use double quotes to encase all values, as it is common practice and necessary if a value includes spaces
+### Elements with one attribute
+`<a href="contact.html">`
+### Element with multiple attributes
+`<a href="contact.html" title="Click to Contact Us" class="nav_link">`
