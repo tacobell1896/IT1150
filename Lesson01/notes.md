@@ -95,7 +95,75 @@
 - Attributes are coded within the opening tag of an element or within an empty tag
 - Needs attribute name, equal sign, and attribute value
 - Use double quotes to encase all values, as it is common practice and necessary if a value includes spaces
+- id and class attributes are the most common
 ### Elements with one attribute
 `<a href="contact.html">`
 ### Element with multiple attributes
 `<a href="contact.html" title="Click to Contact Us" class="nav_link">`
+### Element with a boolean value
+`<input type="checkbox" name="mailList" checked>`
+## Comments and Whitespace
+- Comments are useful for explaining functions of code
+- Commenting out portions of code is useful when testing a web page and temporarily disabling a portion of the code
+- Whitespace is ignored when the HTML document is rendered, but should be used for formatting so that file sizes aren't too large.
+
+# Chapter 02 CSS Syntax
+## CSS Style rules
+- CSS file consists of style rules
+- Style rule consists of selector followed by a set of braces
+- Braces contain declarations
+- Declarations contain properties and values.
+
+```
+h1	{
+	color: black;
+}
+
+/*
+	Everthing contained in here is a comment
+*/
+```
+## How to code basic selectors
+- Selector identifies element(s) that style declarations apply to.
+### Type Selectors
+- These apply to elements
+### ID Selectors
+- These apply to anything with the ID attribute
+### Class Selectors
+- These apply to any elements with the class attribute
+### Examples
+```
+<body>
+	<h1 class="style">Test</h1>
+	<p>This is a test paragraph</p>
+	<ul id="links">
+		<li>Test item</li>
+	</ul>
+</body>
+/* Type Selector */
+body {
+	font-family: Arial, sans-serif;
+}
+/* ID Selector */
+#links {
+	color: blue;
+}
+/* Class Selector */
+.style {
+	font-size: 75%;
+}
+```
+# Chapter 03
+## How to code the Head Section
+- contains information about the webpage rather than the content.
+### How to code the title element
+- Head section should have a unique title element that describes the content of a page.
+`<title>This is a Title</title>`
+### How to link to a favicon
+- Uses the link element.
+- Icon is typically named favicon.ico
+` <link rel="shortcut icon" href="favicon.ico">`
+### How to include metadata
+- Defined using the meta element
+- Attributes include description and keywords
+
