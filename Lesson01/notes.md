@@ -166,4 +166,44 @@ body {
 ### How to include metadata
 - Defined using the meta element
 - Attributes include description and keywords
-
+## How to Code Text Elements
+Two Types of Elements:
+- Block Elements
+- Inline Elements
+### How to code headings and paragraphs
+- Most common content of a web page.
+- Are block elements, and begins on a new line when it is displayed.
+- Each element has a default font and size determined by the base font of the browser.
+- h1 through h6 elements should be used to provide a logical structure.
+- Structure helps search engines to index your site properly.
+### Example
+```
+<h1>H1 Heading</h1>
+<h2>H2 Heading</h2>
+<p>Paragraph example right here.</p>
+<h2>Another H2 Heading</h2>
+<p>Another Paragraph example.</p>
+```
+## How to code special blocks of text
+- HTML provides elements to code special blocks of text
+- pre element is used to display preformatted blocks of code.
+- blockquote element is used to display a quote.
+- address element is used to display contact information.
+- can all be formatted using CSS
+### Example
+```
+<pre>
+	var today = new Date();
+	document.writeln( today.getFullYear() );
+</pre>
+<blockquote> Name one genius that ain't crazy!
+</blockquote>
+<address>555-555-5555
+</address>
+```
+## How to code inline elements
+- Inline elements don't start on a new line.
+- Coded from within a block element
+- Exception is ` <br> `, this starts a new line.
+## How to code character entities
+- special characters such as the copyright symbols and curly quotes.
