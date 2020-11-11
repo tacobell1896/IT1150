@@ -98,6 +98,7 @@ section ul	{
 
 section li	{
 	padding-bottom: .35em;
+	list-style-type: circle;
 }
 a:focus, a:hover	{
 	font-style: italic;
@@ -146,11 +147,12 @@ nav ul	{
 
 nav li	{
 	float: left;
+	width: 20%;
 }
 
 nav a	{
 	display: block;
-	width: 20%;
+	width: 100%;
 	text-align: center;
 	padding-top: 1em;
 	padding-bottom: 1em;
@@ -164,19 +166,27 @@ nav a	{
 	color: yellow;
 }
 
-#submenu	{
-	display: none;
+nav li ul	{
 	position: absolute;
-	top: 0;
+	top: 2em;
+	display: none;
 }
 
-#submenu li	{
+nav li ul li	{
 	float: none;
+	width: 100%;
 }
 
-#submenu :hover	{
+nav ul li:hover > ul	{
 	display: block;
 }
+
+nav ::after	{
+	clear: all;
+	display: block;
+}
+
+
 /* the styles for the footer */
 
 footer 	{
