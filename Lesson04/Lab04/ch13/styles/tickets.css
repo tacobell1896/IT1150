@@ -80,6 +80,11 @@ input:invalid {
 	box-shadow: none;
 	border: 2px solid #800000;
 }
+#payment	{
+	width: auto;
+	float: none;
+	margin-left: 3em;
+}
 br {
     clear: both;
 }
