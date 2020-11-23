@@ -80,10 +80,17 @@ input:invalid {
 	box-shadow: none;
 	border: 2px solid #800000;
 }
-#payment	{
+#payment input, #payment label {
 	width: auto;
 	float: none;
 	margin-left: 3em;
+}
+
+#ccMonth	{
+	width: 7em;
+}
+#ccYear	{
+	width: 5em;
 }
 br {
     clear: both;

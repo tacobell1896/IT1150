@@ -75,8 +75,41 @@
 					<input type="radio" id="credit" name="payment" value="credit">	
 					<label for="credit">Credit Card</label>
 				</fieldset>
+				<fieldset id="ccinfo">
+					<legend>Credit Card Information</legend>
+					<label for="ccType">Credit Card Type</label>
+					<select name="ccType" id="ccType">
+					<option value="v">Visa</option>
+					<option value="m">MasterCard</option>
+					<option value="d">Discover</option>
+					</select>
+					<label for="ccNumber">Credit Card Number:</label>
+					<input type="text" name="ccNumber" id="ccNumber" placeholder="16 Digits">
+					<label for "ccMonth">Expiration date:</label>
+					<select id="ccMonth">
+						<option value="jan">January</option>
+						<option value="feb">February</option>
+						<option value="mar">March</option>
+						<option value="apr">April</option>
+						<option value="may">May</option>
+						<option value="jun">June</option>
+						<option value="jul">July</option>
+						<option value="aug">August</option>
+						<option value="sep">September</option>
+						<option value="oct">October</option>
+						<option value="nov">November</option>
+						<option value="dec">December</option>
+					</select>
+					<select id="ccYear">
+						<option value="2017">2017</option>
+						<option value="2018">2018</option>
+						<option value="2019">2019</option>
+						<option value="2020">2020</option>
+						<option value="2021">2021</option>
+					</select>
+				</fieldset>
 				<fieldset id="buttons">
-					<legend>Submit Your Membership</legend>
+					<legend>Submit Your Order</legend>
 					<label>&nbsp;</label>
 					<input type="submit" id="submit" value="Submit">
 					<input type="reset" id="reset" value="Reset Fields"><br>
