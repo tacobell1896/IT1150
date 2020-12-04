@@ -14,21 +14,20 @@ body {
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-template-rows: auto auto auto auto;
-	grid-template-areas: 
-						"header header"
-						"nav nav"
-						"main main" 
-						"footer footer";
+    display: grid;
+    grid-template: repeat(4, auto) / 1fr;
+    grid-template-areas:
+        "head"
+        "navi"
+        "main"
+        "foot";
 }
 a:focus, a:hover {
 	font-style: italic;
 }
 /* the styles for the header */
 header {
-	padding: 1.5em 0 2em 0;
+	padding: 1em 0 .5em 0;
 	border-bottom: 3px solid #931420;
 		background-image: -moz-linear-gradient(
 	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
@@ -38,8 +37,8 @@ header {
 	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
 	background-image: linear-gradient(
 	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
-	grid-area: header;
-	}
+    grid-area: head;
+}
 header h2 {
 	font-size: 175%;
 	color: #800000;
@@ -56,17 +55,16 @@ header img {
 	text-shadow: 2px 2px 2px #800000;
 }
 /* the styles for the navigation menu */
-
+#nav_menu {
+    grid-area: navi;
+}
 #nav_menu ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	width: 100%;
-	display: grid;
-	grid-area: nav;
-	grid-template-rows: auto;
-	grid-template-columns: repeat(5, 20% [col-start]);
-	align-items: stretch;
+    display: grid;
+    grid-template: auto / repeat(5, 1fr);
+    align-content: center;
 }
 #nav_menu ul li a {
     display: block;
@@ -80,14 +78,20 @@ header img {
 #nav_menu a.current {
 	color: yellow;
 }
-main	{
-	display: grid;
-	grid-template-columns: 30% 67.5%;
-	grid-template-rows: auto;
-	column-gap: 2.5%;
-	grid-area: main;
+/* the styles for the main content */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template: auto / 30% auto;
+    grid-gap: 2.5%;
 }
+
 /* the styles for the section */
+section {
+	padding: 0 3.7% 20px 0;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
 section h1 {
 	font-size: 150%;
 	padding: .5em 0 .25em 0;
@@ -118,7 +122,6 @@ article {
 	padding: .5em 0;
 	border-top: 2px solid #800000;
 	border-bottom: 2px solid #800000;
-	grid-column: 2;
 }
 article h2 {
 	padding-top: 0;
@@ -136,10 +139,11 @@ article img {
 }
 
 /* the styles for the aside */
-aside	{
-	grid-column: 1;
+aside {
+	padding: 0 0 20px 8.3%;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
 }
-
 aside h2 {
 	color: #800000;
 	font-size: 130%;
@@ -157,7 +161,7 @@ aside img {
 /* the styles for the footer */
 footer {
 	background-color: #931420;
-	grid-area: footer;
+    grid-area: foot;
 }
 footer p {
 	text-align: center;
@@ -179,8 +183,28 @@ footer p {
 
 	header img { float: none; }
 	header {
+        display: grid;
+        grid-template: repeat(3, auto) / 1fr;
+        grid-gap: .5em;
         text-align: center;
+        padding: 1.5em 0 1.5em 0;
     }
+    header img {
+        justify-self: center;
+    }
+    main {
+        grid-template: auto auto / 1fr;
+    }
+	section {
+        grid-column: 1 / 2;
+        margin: 0 2.5%;
+        padding-right: 0;
+	}
+	aside {
+		padding-right: 2.5%;
+        padding-left: 2.5%;
+        grid-row: 2 / 3;
+	}
 	article img { max-width: 30%; }
 	#speakers {
 		column-count: 2;
@@ -190,6 +214,7 @@ footer p {
 	}
 	#mobile_menu {
 		display: block;
+        grid-area: navi;
 	}
 	.slicknav_menu {
 		background-color: #800000 !important;
