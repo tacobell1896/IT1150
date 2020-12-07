@@ -158,6 +158,11 @@ aside img {
 	padding-bottom: 1em;
 }
 
+aside input	{
+	padding: .25em;
+	margin-top: 1em;
+}
+
 /* the styles for the footer */
 footer {
 	background-color: #931420;
@@ -168,4 +173,10 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
+}
+
+@media print	{
+	aside input {
+		display: none;
+	}
 }

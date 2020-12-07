@@ -6,7 +6,8 @@
 	<title>San Joaquin Valley Town Hall</title>
 	<link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
-	<link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="javascript/printPage.js"></script>
 </head>
 
 <body>
@@ -54,6 +55,7 @@
             </ul>
         </section>
         <aside>
+            <input type="button" id="printButton" value="Print Page">
             <h2 id="speakers">Speakers</h2>
             <h3>October<br><a href="speakers/toobin.html">Jeffrey Toobin</a></h3>
             <img src="images/toobin75.jpg" alt="Jeffrey Toobin photo">
@@ -66,7 +68,14 @@
         </aside>
 	</main>    
 	<footer>
-		<p>&copy; 2018, San Joaquin Valley Town Hall, Fresno, CA 93755</p>
+		<p>
+            <script>
+                var today = new Date();
+                document.write( "&copy;&nbsp;");
+                document.write(today.getFullYear());
+                document.write(", San Joaquin Valley Town Hall, Fresno, CA 93755")
+            </script>
+        </p>
 	</footer>
 </body>
 </html>
