@@ -12,10 +12,11 @@ header	{
 }
 
 header img	{
-
+	width: 35%;
+	margin: auto;
 }
 
-nav	{
+nav ul	{
 	color: black;	
 }
 nav li 	{
