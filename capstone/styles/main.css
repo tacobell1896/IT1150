@@ -76,6 +76,20 @@ figcaption	{
 	text-align: center;
 }
 
+table	{
+	border: #2e3440 2px solid;
+	border-radius: 5px;
+}
+
+#head	{
+	background-color: #81a1c1;
+	border: none;
+}
+
+td	{
+	border: #2e3440 2px solid;
+}
+
 footer	{
 	background-color: #5e81ac;
 	text-align: center;
