@@ -90,6 +90,23 @@ td	{
 	border: #2e3440 2px solid;
 }
 
+#gallery	{
+	width: 90%;
+}
+
+#controls	{
+	display: flex;
+	justify-content: space-between;
+}
+
+form input, textarea	{
+	width: 90%;
+	border: 2px #2e3440 solid;
+	border-radius: 5px;
+	padding: .35em;
+	background-color: #81a1c1;
+}
+
 footer	{
 	background-color: #5e81ac;
 	text-align: center;
@@ -103,7 +120,7 @@ footer p	{
 	margin: 0;
 }
 
-@media only screen and (max-width: 600px)	{
+@media only screen and (max-width: 768px)	{
 	nav	ul {
 		flex-direction: column;
 	}
@@ -112,6 +129,18 @@ footer p	{
 		width: 100%;
 	}
 
+	main 	{
+		flex-direction: column;
+		width: 90%;
+		align-items: center;
+	}
+
+	footer	{
+		width: 90%;
+	} 
+}
+
+@media only screen and (max-width: 769px - 1024px)	{
 	main 	{
 		flex-direction: column;
 		width: 90%;
